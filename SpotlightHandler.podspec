@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = "SpotlightHandler"
   s.version          = "0.1.0"
-  s.summary          = "A simple way to index your application making it visible on Spotlight Search"
+  s.summary          = "A simple way to index your application"
 
   s.description      = "A simple way to index your application making it visible on Spotlight Search"
 
@@ -22,12 +22,12 @@ Pod::Spec.new do |s|
   s.platform     = :ios, '7.0'
   s.requires_arc = true
 
-  s.source_files = 'Pod/SpotlightUtils/*.{h,m}'
+  s.source_files = 'Pod/SpotlightUtils/**/**/*.{h,m}'
   s.resource_bundles = {
     'SpotlightHandler' => ['Pod/Assets/*.png']
   }
 
-  s.public_header_files = 'Pod/SpotlightUtils/**/*.h'
+  s.public_header_files = 'Pod/SpotlightUtils/**/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
   # s.dependency 'AFNetworking', '~> 2.3'
 end
