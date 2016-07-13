@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "SpotlightHandler"
-  s.version          = "0.1.0"
+  s.version          = "0.1.4"
   s.summary          = "A simple way to index your application"
 
   s.description      = "A simple way to index your application making it visible on Spotlight Search"
@@ -28,6 +28,4 @@ Pod::Spec.new do |s|
   }
 
   s.public_header_files = 'Pod/SpotlightUtils/**/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
 end

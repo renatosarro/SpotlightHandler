@@ -1,6 +1,9 @@
 # SpotlightHandler
 A simple way to index your application making it visible on Spotlight Search
 
+#0.1.4 Update
+Define what App icon will be used in index search. If pass "nil", the search will be indexed with icon named "AppIcon"
+
 # Pod
 
 Podfile

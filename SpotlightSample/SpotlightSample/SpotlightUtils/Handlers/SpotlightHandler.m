@@ -7,13 +7,8 @@
 //
 
 #import "SpotlightHandler.h"
-#import "AppDelegate.h"
 
 @implementation SpotlightHandler
-
-+ (AppDelegate *)appDelegate {
-    return (AppDelegate *)[UIApplication sharedApplication].delegate;
-}
 
 + (void)openController:(NSString *)identifier {
     [self openControllerWith:nil identifier:identifier];
@@ -30,18 +25,19 @@
         navigationController = [[UINavigationController alloc] initWithRootViewController:viewController];
     }
     
-    [SpotlightHandler appDelegate].window.rootViewController = navigationController;
-    [[SpotlightHandler appDelegate].window makeKeyAndVisible];
+    [UIApplication sharedApplication].delegate.window.rootViewController = navigationController;
+    [[UIApplication sharedApplication].delegate.window makeKeyAndVisible];
 }
 
-+ (void)setupCoreSpotlightSearch:(NSString *)title description:(NSString *)description keywords:(NSArray *)keywords storyboard:(NSString *)storyboard controller:(NSString *)controller
++ (void)setupCoreSpotlightSearch:(UIImage *)iconImage title:(NSString *)title description:(NSString *)description keywords:(NSArray *)keywords storyboard:(NSString *)storyboard controller:(NSString *)controller
 {
     CSSearchableItemAttributeSet *attibuteSet = [[CSSearchableItemAttributeSet alloc] initWithItemContentType:(__bridge NSString *)kUTTypeImage];
     attibuteSet.title = NSLocalizedString(title, title);
     attibuteSet.contentDescription = description;
     attibuteSet.keywords = keywords;
     
-    UIImage *image = [UIImage imageNamed:@"AppIcon"];
+    UIImage *image = iconImage ? iconImage : [UIImage imageNamed:@"AppIcon"];
+    
     NSData *imageData = [NSData dataWithData:UIImagePNGRepresentation(image)];
     attibuteSet.thumbnailData = imageData;
     

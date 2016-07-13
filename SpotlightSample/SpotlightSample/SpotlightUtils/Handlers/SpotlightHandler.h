@@ -17,6 +17,6 @@
 
 + (void)openControllerWith:(UINavigationController *)navigationController identifier:(NSString *)identifier;
 
-+ (void)setupCoreSpotlightSearch:(NSString *)title description:(NSString *)description keywords:(NSArray *)keywords storyboard:(NSString *)storyboard controller:(NSString *)controller;
++ (void)setupCoreSpotlightSearch:(UIImage *)iconImage title:(NSString *)title description:(NSString *)description keywords:(NSArray *)keywords storyboard:(NSString *)storyboard controller:(NSString *)controller;
 
 @end

@@ -26,7 +26,7 @@
 #pragma mark - Spotlight
 
 - (void)indexController {
-    [SpotlightHandler setupCoreSpotlightSearch:self.SpotTitle description:self.SpotDescription keywords:[self.SpotKeywords componentsSeparatedByString:@","] storyboard:[NSString stringWithFormat:@"%@", [self.storyboard valueForKey:@"name"]] controller:[NSString stringWithFormat:@"%@", self.class]];
+    [SpotlightHandler setupCoreSpotlightSearch:nil title:self.SpotTitle description:self.SpotDescription keywords:[self.SpotKeywords componentsSeparatedByString:@","] storyboard:[NSString stringWithFormat:@"%@", [self.storyboard valueForKey:@"name"]] controller:[NSString stringWithFormat:@"%@", self.class]];
 }
 
 @end
